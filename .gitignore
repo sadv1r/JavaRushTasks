@@ -1,0 +1,7 @@
+.idea/
+out/
+*.iml
+target/
+JavaRushPlugin.properties
+DO NOT READ.txt
+ru/
