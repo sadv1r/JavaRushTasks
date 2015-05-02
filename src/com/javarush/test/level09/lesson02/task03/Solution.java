@@ -14,6 +14,7 @@ public class Solution
     public static int method1()
     {
         method2();
+        System.out.println(Thread.currentThread().getStackTrace()[0].toString());
         return Thread.currentThread().getStackTrace()[2].getLineNumber();
     }
 
@@ -26,6 +27,7 @@ public class Solution
     public static int method3()
     {
         method4();
+        System.out.println(Thread.currentThread().getStackTrace()[1].toString());
         return Thread.currentThread().getStackTrace()[2].getLineNumber();
     }
 
