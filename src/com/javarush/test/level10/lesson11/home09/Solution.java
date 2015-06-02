@@ -18,7 +18,7 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        ArrayList<String> words = new ArrayList<>();
+        ArrayList<String> words = new ArrayList<String>();
         for (int i = 0; i < 20; i++) {
             words.add(reader.readLine());
         }
@@ -34,7 +34,15 @@ public class Solution {
         HashMap<String, Integer> result = new HashMap<String, Integer>();
 
         //Напишите тут ваш код
-
+        for (String word : list) {
+            if (result.containsKey(word)) {
+                int temp = result.get(word);
+                result.remove(word);
+                result.put(word, ++temp);
+            } else {
+                result.put(word, 1);
+            }
+        }
 
         return result;
     }
